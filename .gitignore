@@ -1,2 +1,4 @@
 assets/genelab-promo.png
-
+src/assets/genelab-promo.png
+node_modules/
+dist/

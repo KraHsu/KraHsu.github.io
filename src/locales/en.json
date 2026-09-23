@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "Charles Hsu — Physical AI & beautiful interfaces",
+    "description": "Charles Hsu — Physical AI researcher, interface maker, and open-source builder."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "home": "Charles Hsu home",
+    "mainNav": "Main navigation",
+    "language": "Language",
+    "heroArt": "Abstract orbital diagram",
+    "interests": "Areas of interest",
+    "openwamRepo": "OpenWAM repository",
+    "openwamImage": "OpenWAM project graphic",
+    "projectImage": "{name} project promo graphic"
+  },
+  "nav": {
+    "now": "Now",
+    "research": "Research",
+    "engineering": "Engineering",
+    "notes": "Notes",
+    "github": "GitHub"
+  },
+  "hero": {
+    "eyebrow": "PHD RESEARCHER / PHYSICAL AI",
+    "title": "I make things{br}that {move}.",
+    "move": "move",
+    "lede": "I study intelligent systems in the physical world. I also make beautiful interfaces and open-source software because the tools we use should feel as considered as the ideas behind them.",
+    "tags": "Web · Robotics · WAM · VLA",
+    "robomaster": "Former RoboMaster member",
+    "core": "PHYSICAL{br}AI",
+    "artTop": "01 — IN MOTION",
+    "artBottom": "research / systems / form",
+    "scroll": "SCROLL TO EXPLORE"
+  },
+  "marquee": ["WEB", "ROBOTICS", "WAM", "VLA", "OPEN SOURCE"],
+  "now": {
+    "index": "NOW",
+    "kicker": "A SMALL INTRODUCTION",
+    "title": "Curious about the gap between {thinking} and {touching}.",
+    "thinking": "thinking",
+    "touching": "touching",
+    "p1": "I am a PhD student researching Physical AI — systems that perceive, reason, and act in the real world. My work lives somewhere between robotics, learning, simulation, and the messy details of making an idea actually run.",
+    "p2": "When I am away from the lab, I design interfaces, maintain open-source tools, and obsess over the little moments that make software feel calm, clear, and surprisingly nice to use.",
+    "interests": ["01 / embodied intelligence", "02 / interface craft", "03 / open source"]
+  },
+  "research": {
+    "index": "RESEARCH",
+    "kicker": "PAPER + CODE",
+    "title": "World–Action Models,{br}{open}",
+    "open": "in the open.",
+    "aside": "An open, modular exploration toward systematic World–Action Model pretraining.",
+    "tag": "01 / PAPER + CODE",
+    "openwam": "An open, modular research stack for World–Action Model pretraining, spanning infrastructure, controlled studies, and an open pretrained WAM.",
+    "authors": "AUTHORS",
+    "authorKey": "* equal contribution · ‡ project lead · † equal advising",
+    "context": "CONTEXT",
+    "contextValue": "WUJI Tech internship",
+    "date": "DATE",
+    "dateValue": "2026 · arXiv preprint",
+    "archivedLabel": "ARCHIVED / SIDE PROJECT",
+    "archivedLink": "HsuBlog — an earlier Astro theme, kept here as a small footnote"
+  },
+  "engineering": {
+    "index": "ENGINEERING",
+    "kicker": "TOOLS, SYSTEMS, EXPERIMENTS",
+    "title": "Different problems,{br}{same}",
+    "same": "same curiosity.",
+    "aside": "GeneLab and Parley belong here: engineering projects around the research, with their own visual language.",
+    "tag": "{n} / ENGINEERING",
+    "genelab": "An Isaac Lab–style API for RL and robotics research, powered by Genesis.",
+    "parley": "An open-source language practice workspace for chat, explanations, vocabulary, and review."
+  },
+  "notes": {
+    "index": "NOTES",
+    "kicker": "A LINE I KEEP COMING BACK TO",
+    "quote": "“The best tools disappear just enough for the idea to come through.”",
+    "caption": "I write about frontend systems, research tooling, and the places where engineering becomes a design problem.",
+    "link": "Read the archived blog"
+  },
+  "footer": {
+    "kicker": "05 / KEEP IN TOUCH",
+    "status": "OPEN TABS",
+    "title": "Say hello{br}{em}",
+    "em": "when you feel like it.",
+    "bilibili": "Bilibili",
+    "csdn": "CSDN",
+    "made": "made between the lab and the browser"
+  }
+}

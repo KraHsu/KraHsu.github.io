@@ -6,9 +6,10 @@
   --panel: #ffffff;
   --line: rgba(21, 23, 28, .12);
   --accent: #2b55c7;
-  --serif: "Instrument Serif", Iowan Old Style, Georgia, serif;
-  --sans: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  --cjk-sans: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei";
+  --serif: "Instrument Serif", Iowan Old Style, Georgia, "Songti SC", "Noto Serif SC", serif;
+  --sans: "Space Grotesk", "Helvetica Neue", Arial, var(--cjk-sans), sans-serif;
+  --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, var(--cjk-sans), monospace;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -27,6 +28,12 @@ a { color: inherit; text-decoration: none; }
 .nav a, .header-github, .footer-links a, .note-link { transition: color .2s ease; }
 .nav a:hover, .header-github:hover, .footer-links a:hover, .note-link:hover { color: var(--accent); }
 .header-github { color: var(--muted); font: 400 12px var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+.header-actions { display: flex; align-items: center; gap: 22px; }
+.lang-switch { display: inline-flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; }
+.lang-switch button { padding: 3px 9px; border: 0; border-radius: 999px; color: var(--faint); background: transparent; font: 400 11px var(--mono); letter-spacing: .06em; cursor: pointer; transition: color .2s ease, background .2s ease; }
+.lang-switch button:hover { color: var(--accent); }
+.lang-switch button.is-active { color: var(--bg); background: var(--accent); }
+.lang-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .live-dot { display: inline-block; width: 6px; height: 6px; margin-right: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 14px var(--accent); }
 .section { width: min(1150px, 88vw); margin: 0 auto; }
 .hero { position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr); gap: 7vw; width: min(1380px, 92vw); min-height: 790px; margin: 0 auto; padding: 130px 0 100px; align-items: center; }
@@ -139,6 +146,11 @@ h1 em, h2 em, .footer-main em { color: var(--accent); font-family: var(--serif);
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .75s ease, transform .75s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
 .reveal-delay { transition-delay: .16s; }
+/* CJK glyphs collide under the tight Latin tracking and have no true italic. */
+:lang(zh-CN) h1 { font-size: clamp(54px, 7vw, 104px); line-height: 1.08; letter-spacing: -.02em; }
+:lang(zh-CN) .now-content h2, :lang(zh-CN) .section-head h2, :lang(zh-CN) .note-body blockquote, :lang(zh-CN) .footer-main h2 { line-height: 1.22; letter-spacing: -.02em; }
+:lang(zh-CN) h1 em, :lang(zh-CN) h2 em, :lang(zh-CN) .footer-main em, :lang(zh-CN) .note-body blockquote { font-style: normal; letter-spacing: -.02em; }
+:lang(zh-CN) .hero-lede, :lang(zh-CN) .now-columns { text-align: justify; }
 @keyframes orbit-one-spin { from { transform: rotate(18deg) scaleY(.4); } to { transform: rotate(378deg) scaleY(.4); } }
 @keyframes orbit-two-spin { from { transform: rotate(-30deg) scaleY(.55); } to { transform: rotate(-390deg) scaleY(.55); } }
 @keyframes orbit-three-spin { from { transform: rotate(64deg) scaleY(.7); } to { transform: rotate(424deg) scaleY(.7); } }
@@ -148,6 +160,8 @@ h1 em, h2 em, .footer-main em { color: var(--accent); font-family: var(--serif);
   .nav { display: none; }
   .hero { grid-template-columns: 1fr; min-height: auto; gap: 62px; width: 90vw; padding: 90px 0; }
   h1 { font-size: clamp(62px, 17vw, 100px); }
+  :lang(zh-CN) h1 { font-size: clamp(46px, 13vw, 80px); }
+  .header-actions { gap: 14px; }
   .hero-art { width: min(460px, 96vw); justify-self: center; }
   .hero-index { bottom: 18px; }
   .section, .work-section, .now-section, .note-inner { width: 90vw; }
