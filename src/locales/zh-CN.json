@@ -1,90 +1,27 @@
 {
-  "meta": {
-    "title": "Charles Hsu — 物理 AI 与优雅的界面",
-    "description": "Charles Hsu —— 物理 AI 研究者、界面设计者、开源构建者。"
-  },
   "a11y": {
     "skip": "跳到正文",
-    "home": "Charles Hsu 首页",
+    "home": "{name} 首页",
     "mainNav": "主导航",
     "language": "语言",
     "heroArt": "抽象轨道示意图",
     "interests": "关注领域",
-    "openwamRepo": "OpenWAM 代码仓库",
-    "openwamImage": "OpenWAM 项目图",
-    "projectImage": "{name} 项目宣传图"
+    "repo": "{name} 代码仓库",
+    "image": "{name} 项目图",
+    "stars": "GitHub 星标"
   },
   "nav": {
-    "now": "此刻",
-    "research": "研究",
-    "engineering": "工程",
-    "notes": "随笔",
     "github": "GitHub"
   },
   "hero": {
-    "eyebrow": "博士研究生 / 物理 AI",
-    "title": "我创造{br}会{move}的东西。",
-    "move": "动",
-    "lede": "我研究物理世界中的智能系统。我也做优雅的界面和开源软件——因为我们使用的工具，理应和它背后的想法一样经过深思熟虑。",
-    "tags": "Web · 机器人 · WAM · VLA",
-    "robomaster": "前 RoboMaster 队员",
-    "core": "物理{br}AI",
-    "artTop": "01 — 运动中",
-    "artBottom": "研究 / 系统 / 形式",
     "scroll": "向下滚动探索"
   },
-  "marquee": ["WEB", "机器人", "WAM", "VLA", "开源"],
-  "now": {
-    "index": "此刻",
-    "kicker": "简单介绍一下",
-    "title": "好奇于{thinking}与{touching}之间的距离。",
-    "thinking": "思考",
-    "touching": "触碰",
-    "p1": "我是一名博士生，研究物理 AI——能在真实世界中感知、推理并行动的系统。我的工作介于机器人、学习、仿真，以及让一个想法真正跑起来的种种琐碎细节之间。",
-    "p2": "离开实验室时，我设计界面、维护开源工具，并执着于那些让软件显得平静、清晰、又出乎意料地好用的小瞬间。",
-    "interests": ["01 / 具身智能", "02 / 界面工艺", "03 / 开源"]
-  },
-  "research": {
-    "index": "研究",
-    "kicker": "论文 + 代码",
-    "title": "世界–动作模型，{br}{open}",
-    "open": "在开放中构建。",
-    "aside": "一次开放、模块化的探索，迈向系统化的世界–动作模型预训练。",
-    "tag": "01 / 论文 + 代码",
-    "openwam": "一套开放、模块化的世界–动作模型（WAM）预训练研究栈，涵盖基础设施、对照研究，以及一个开源的预训练 WAM。",
+  "paper": {
     "authors": "作者",
-    "authorKey": "* 同等贡献 · ‡ 项目负责人 · † 共同指导",
     "context": "背景",
-    "contextValue": "WUJI Tech 实习",
     "date": "时间",
-    "dateValue": "2026 · arXiv 预印本",
-    "archivedLabel": "已归档 / 业余项目",
-    "archivedLink": "HsuBlog —— 早期的一个 Astro 主题，作为小小的脚注留在这里"
-  },
-  "engineering": {
-    "index": "工程",
-    "kicker": "工具、系统与实验",
-    "title": "不同的问题，{br}{same}",
-    "same": "同样的好奇。",
-    "aside": "GeneLab 和 Parley 属于这里：围绕研究展开的工程项目，各自有自己的视觉语言。",
-    "tag": "{n} / 工程",
-    "genelab": "一套 Isaac Lab 风格的强化学习与机器人研究 API，基于 Genesis 构建。",
-    "parley": "一个开源的语言练习工作台，支持对话、讲解、词汇与复习。"
-  },
-  "notes": {
-    "index": "随笔",
-    "kicker": "一句我时常回想的话",
-    "quote": "“最好的工具，恰到好处地隐去自身，让想法得以显现。”",
-    "caption": "我写前端系统、研究工具，以及工程变成设计问题的那些地方。",
-    "link": "阅读已归档的博客"
-  },
-  "footer": {
-    "kicker": "05 / 保持联系",
-    "status": "标签页常开",
-    "title": "想打招呼时，{br}{em}",
-    "em": "随时都好。",
-    "bilibili": "哔哩哔哩",
-    "csdn": "CSDN",
-    "made": "诞生于实验室与浏览器之间"
+    "venue": "发表于",
+    "moreAuthors": "另外 {n} 位",
+    "fewerAuthors": "收起"
   }
 }
