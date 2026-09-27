@@ -9,7 +9,7 @@
 
 /** @type {import("./types").SiteConfig} */
 export default {
-  url: "https://krahsu.github.io",
+  url: "https://www.krahsu.top",
   name: "Charles Hsu",
   avatar: "https://github.com/KraHsu.png?size=96",
   github: "KraHsu",

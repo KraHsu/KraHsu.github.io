@@ -2,7 +2,7 @@
 
 An English-first personal homepage for Charles Hsu, a Physical AI PhD researcher, interface maker, and open-source builder.
 
-Published at [krahsu.github.io](https://krahsu.github.io/). Pushes to `main` run the GitHub Pages workflow, which installs dependencies with `npm ci`, builds both language routes, and deploys `dist/`. The workflow can also be run manually from GitHub Actions. The repository's Pages publishing source must be set to **GitHub Actions**.
+Published at [www.krahsu.top](https://www.krahsu.top/). Pushes to `main` run the GitHub Pages workflow, which installs dependencies with `npm ci`, builds both language routes, and deploys `dist/`. The workflow can also be run manually from GitHub Actions. The repository's Pages publishing source must be set to **GitHub Actions**.
 
 ## Stack
 

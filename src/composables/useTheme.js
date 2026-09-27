@@ -2,7 +2,7 @@ import { onBeforeUnmount, onMounted, ref } from "vue";
 
 const STORAGE_KEY = "theme";
 // Must match the backgrounds in styles.css so the browser chrome matches the page.
-const THEME_COLORS = { light: "#fffdfa", dark: "#111318" };
+const THEME_COLORS = { light: "#eff1f5", dark: "#1e1e2e" };
 
 function readStored() {
   try {
