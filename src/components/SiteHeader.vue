@@ -3,6 +3,7 @@ import { useI18n } from "vue-i18n";
 import { useContent } from "../content";
 import { useActiveSection } from "../composables/useActiveSection";
 import LanguageSwitcher from "./LanguageSwitcher.vue";
+import ThemeToggle from "./ThemeToggle.vue";
 
 const { t } = useI18n();
 const { site, l } = useContent();
@@ -22,9 +23,15 @@ const active = useActiveSection(links.map((section) => section.id));
         :aria-current="active === link.id ? 'location' : undefined"
       >{{ l(link.label) }}</a>
     </nav>
-    <div class="header-actions">
+    <div class="toolbar">
       <LanguageSwitcher />
-      <a class="header-github mono-label" :href="`https://github.com/${site.github}`" target="_blank" rel="noreferrer"><span class="live-dot"></span> {{ t("nav.github") }} ↗</a>
+      <span class="toolbar-divider" aria-hidden="true"></span>
+      <ThemeToggle />
+      <span class="toolbar-divider" aria-hidden="true"></span>
+      <a class="toolbar-chip header-github" :href="`https://github.com/${site.github}`" target="_blank" rel="noreferrer" :aria-label="t('nav.github')">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" /></svg>
+        <span class="github-label">{{ t("nav.github") }} <span class="arrow">↗</span></span>
+      </a>
     </div>
   </header>
 </template>
@@ -65,15 +72,25 @@ const active = useActiveSection(links.map((section) => section.id));
 }
 .nav a:hover, .nav a.is-active { color: var(--accent); }
 .nav a.is-active::after { transform: scaleX(1); }
-.header-actions { display: flex; align-items: center; gap: 22px; }
-.header-github { color: var(--muted); letter-spacing: .07em; transition: color .2s ease; }
-.header-github:hover { color: var(--accent); }
+/* One pill for all header controls; each segment is a .toolbar-chip (styles.css). */
+.toolbar { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; }
+.toolbar-divider { width: 1px; height: 14px; margin: 0 3px; background: var(--line); }
+.header-github svg { width: 13px; height: 13px; fill: currentColor; }
+/* ↗ isn't in the mono face, so its fallback (and width) differs per language; pin it to one character cell. */
+.arrow { display: inline-block; width: 1ch; text-align: center; }
 
 @media (max-width: 800px) {
   .site-header { flex-wrap: wrap; row-gap: 14px; width: 90vw; padding: 14px 16px 12px; }
-  .header-actions { gap: 14px; }
   /* The nav drops to its own row instead of disappearing. */
   .nav { order: 3; width: 100%; margin-left: 0; padding-top: 12px; overflow-x: auto; border-top: 1px solid var(--line); font-size: 11px; justify-content: space-between; scrollbar-width: none; }
   .nav a { flex: none; }
+}
+/* Small phones keep the GitHub mark and drop its label. */
+@media (max-width: 420px) {
+  .github-label { display: none; }
+  .header-github { width: 26px; padding: 0; }
+  .toolbar { gap: 0; }
+  .toolbar-divider { margin: 0 2px; }
+  .lang-switch :deep(.toolbar-chip) { width: 38px; }
 }
 </style>

@@ -18,7 +18,7 @@ const stars = useRepoStars(props.section.items.map((paper) => paper.repo).filter
       <div class="paper-list">
         <PaperCard v-for="paper in section.items" :key="paper.number" :paper="paper" :item-label="l(section.itemLabel)" :stars="stars[paper.repo]" />
       </div>
-      <SectionFootnote v-if="section.footnote" :footnote="section.footnote" />
+      <SectionFootnote v-for="footnote in section.footnotes" :key="footnote.href" :footnote="footnote" />
     </div>
   </section>
 </template>

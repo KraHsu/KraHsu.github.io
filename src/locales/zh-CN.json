@@ -8,20 +8,21 @@
     "interests": "关注领域",
     "repo": "{name} 代码仓库",
     "image": "{name} 项目图",
-    "stars": "GitHub 星标"
+    "stars": "GitHub 星标",
+    "darkTheme": "深色模式"
   },
   "nav": {
     "github": "GitHub"
   },
   "hero": {
-    "scroll": "向下滚动探索"
+    "scroll": "向下浏览"
   },
   "paper": {
     "authors": "作者",
     "context": "背景",
     "date": "时间",
     "venue": "发表于",
-    "moreAuthors": "另外 {n} 位",
+    "moreAuthors": "展开其余 {n} 位作者",
     "fewerAuthors": "收起"
   }
 }

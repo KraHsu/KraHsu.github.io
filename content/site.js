@@ -21,16 +21,16 @@ export default {
     },
     description: {
       en: "Charles Hsu — Physical AI researcher, interface maker, and open-source builder.",
-      zh: "Charles Hsu —— 物理 AI 研究者、界面设计者、开源构建者。",
+      zh: "Charles Hsu —— 研究物理 AI，设计界面，开发开源软件。",
     },
   },
 
   hero: {
     eyebrow: { en: "PHD RESEARCHER / PHYSICAL AI", zh: "博士研究生 / 物理 AI" },
-    title: { en: "I make things\nthat *move*.", zh: "我创造\n会*动*的东西。" },
+    title: { en: "I make things\nthat *move*.", zh: "让智能\n*行动起来。*" },
     lede: {
       en: "I study intelligent systems in the physical world. I also make beautiful interfaces and open-source software because the tools we use should feel as considered as the ideas behind them.",
-      zh: "我研究物理世界中的智能系统。我也做优雅的界面和开源软件——因为我们使用的工具，理应和它背后的想法一样经过深思熟虑。",
+      zh: "我研究物理世界中的智能系统，也设计界面、开发开源软件。我相信，工具本身和背后的想法一样，都值得用心打磨。",
     },
     tags: [
       { en: "Web · Robotics · WAM · VLA", zh: "Web · 机器人 · WAM · VLA" },
@@ -39,7 +39,7 @@ export default {
     core: { en: "PHYSICAL\nAI", zh: "物理\nAI" },
     artLabels: {
       top: { en: "01 — IN MOTION", zh: "01 — 运动中" },
-      bottom: { en: "research / systems / form", zh: "研究 / 系统 / 形式" },
+      bottom: { en: "research / systems / form", zh: "研究 / 系统 / 形态" },
     },
     coordinates: ["31.2304", "121.4737"],
   },
@@ -57,21 +57,21 @@ export default {
       kicker: { en: "A SMALL INTRODUCTION", zh: "简单介绍一下" },
       title: {
         en: "Curious about the gap between *thinking* and *touching*.",
-        zh: "好奇于*思考*与*触碰*之间的距离。",
+        zh: "从*思考*到*触碰*，中间还有多远？",
       },
       paragraphs: [
         {
           en: "I am a PhD student researching Physical AI — systems that perceive, reason, and act in the real world. My work lives somewhere between robotics, learning, simulation, and the messy details of making an idea actually run.",
-          zh: "我是一名博士生，研究物理 AI——能在真实世界中感知、推理并行动的系统。我的工作介于机器人、学习、仿真，以及让一个想法真正跑起来的种种琐碎细节之间。",
+          zh: "我是一名PhD，研究 Physical AI，也就是能在真实世界中感知、推理和行动的智能系统。我的研究涉及机器人、机器学习和仿真，也需要处理各种具体问题，让想法真正运行起来。",
         },
         {
           en: "When I am away from the lab, I design interfaces, maintain open-source tools, and obsess over the little moments that make software feel calm, clear, and surprisingly nice to use.",
-          zh: "离开实验室时，我设计界面、维护开源工具，并执着于那些让软件显得平静、清晰、又出乎意料地好用的小瞬间。",
+          zh: "研究之余，我设计界面、维护开源工具。我喜欢琢磨使用中的细节，让软件清晰易懂，用起来轻松顺手，偶尔还能带来一点惊喜。",
         },
       ],
       interests: [
         { en: "01 / embodied intelligence", zh: "01 / 具身智能" },
-        { en: "02 / interface craft", zh: "02 / 界面工艺" },
+        { en: "02 / interface craft", zh: "02 / 界面设计" },
         { en: "03 / open source", zh: "03 / 开源" },
       ],
     },
@@ -80,13 +80,13 @@ export default {
       id: "research",
       type: "papers",
       label: { en: "Research", zh: "研究" },
-      kicker: { en: "PAPER + CODE", zh: "论文 + 代码" },
-      title: { en: "World–Action Models,\n*in the open.*", zh: "世界–动作模型，\n*在开放中构建。*" },
+      kicker: { en: "SELECTED PAPERS", zh: "代表论文" },
+      title: { en: "Learning to act\n*in the physical world.*", zh: "学习如何\n*在真实世界中行动。*" },
       aside: {
-        en: "An open, modular exploration toward systematic World–Action Model pretraining.",
-        zh: "一次开放、模块化的探索，迈向系统化的世界–动作模型预训练。",
+        en: "Physical AI: how models perceive, predict, and act. Papers, preprints, and the code behind them.",
+        zh: "研究模型如何在物理世界中感知、预测和行动。这里是我的相关论文和代码。",
       },
-      itemLabel: { en: "PAPER + CODE", zh: "论文 + 代码" },
+      itemLabel: { en: "PAPER", zh: "论文" },
       items: [
         {
           title: "OpenWAM",
@@ -95,7 +95,7 @@ export default {
           image: { src: "openwam-title.webp", width: 2172, height: 425 },
           description: {
             en: "An open, modular research stack for World–Action Model pretraining, spanning infrastructure, controlled studies, and an open pretrained WAM.",
-            zh: "一套开放、模块化的世界–动作模型（WAM）预训练研究栈，涵盖基础设施、对照研究，以及一个开源的预训练 WAM。",
+            zh: "一套开放、模块化的世界–动作模型（WAM）预训练研究工具体系，涵盖基础设施、对照实验，以及一个开放的 WAM 预训练模型。",
           },
           authors: [
             { name: "Yuran Wang", marks: "*‡" },
@@ -130,7 +130,7 @@ export default {
           meta: [
             {
               label: "context",
-              link: { text: { en: "WUJI Tech internship", zh: "WUJI Tech 实习" }, href: "https://wuji.tech/zh/" },
+              link: { text: { en: "WUJI Tech internship", zh: "WUJI Tech internship" }, href: "https://wuji.tech/zh/" },
             },
             {
               label: "date",
@@ -140,14 +140,6 @@ export default {
           ],
         },
       ],
-      footnote: {
-        label: { en: "ARCHIVED / SIDE PROJECT", zh: "已归档 / 业余项目" },
-        text: {
-          en: "HsuBlog — an earlier Astro theme, kept here as a small footnote",
-          zh: "HsuBlog —— 早期的一个 Astro 主题，作为小小的脚注留在这里",
-        },
-        href: "https://github.com/KraHsu/HsuBlog",
-      },
     },
 
     {
@@ -155,10 +147,10 @@ export default {
       type: "projects",
       label: { en: "Engineering", zh: "工程" },
       kicker: { en: "TOOLS, SYSTEMS, EXPERIMENTS", zh: "工具、系统与实验" },
-      title: { en: "Different problems,\n*same curiosity.*", zh: "不同的问题，\n*同样的好奇。*" },
+      title: { en: "Different problems,\n*same curiosity.*", zh: "不同的问题，\n*同样的好奇心。*" },
       aside: {
-        en: "GeneLab and Parley belong here: engineering projects around the research, with their own visual language.",
-        zh: "GeneLab 和 Parley 属于这里：围绕研究展开的工程项目，各自有自己的视觉语言。",
+        en: "Tools I build around the research, and open-source projects I help shape.",
+        zh: "这里有我为研究开发的工具，也有我参与的开源项目。",
       },
       itemLabel: { en: "ENGINEERING", zh: "工程" },
       items: [
@@ -168,7 +160,7 @@ export default {
           image: { src: "genelab-promo.svg", width: 1200, height: 720 },
           description: {
             en: "An Isaac Lab–style API for RL and robotics research, powered by Genesis.",
-            zh: "一套 Isaac Lab 风格的强化学习与机器人研究 API，基于 Genesis 构建。",
+            zh: "基于 Genesis，为强化学习和机器人研究提供 Isaac Lab 风格的 API。",
           },
         },
         {
@@ -177,15 +169,34 @@ export default {
           image: { src: "parley-hero-light.svg", dark: "parley-hero-dark.svg", width: 1600, height: 520 },
           description: {
             en: "An open-source language practice workspace for chat, explanations, vocabulary, and review.",
-            zh: "一个开源的语言练习工作台，支持对话、讲解、词汇与复习。",
+            zh: "一个开源语言练习工具，集对话练习、语言讲解、词汇学习和复习于一体。",
+          },
+        },
+        {
+          name: "ThoughtLite",
+          repo: "tuyuritio/astro-theme-thought-lite",
+          image: { src: "thoughtlite-preview-light.webp", dark: "thoughtlite-preview-dark.webp", width: 1400, height: 788 },
+          description: {
+            en: "A modern Astro theme focused on content creation. I contribute to it, and my blog runs on it.",
+            zh: "一个专注于内容创作的现代 Astro 主题。我参与了这个项目的开发，自己的博客也用它搭建。",
           },
         },
       ],
-      footnote: {
-        label: { en: "MORE EXPERIMENTS", zh: "更多实验" },
-        text: { en: "Everything else lives on GitHub", zh: "其余项目都在 GitHub 上" },
-        href: "https://github.com/KraHsu?tab=repositories",
-      },
+      footnotes: [
+        {
+          label: { en: "ARCHIVED / SIDE PROJECT", zh: "已归档 / 业余项目" },
+          text: {
+            en: "HsuBlog — an earlier Astro theme, kept here as a small footnote",
+            zh: "HsuBlog —— 早期做的一个 Astro 主题，留在这里作个记录",
+          },
+          href: "https://github.com/KraHsu/HsuBlog",
+        },
+        {
+          label: { en: "MORE EXPERIMENTS", zh: "更多实验" },
+          text: { en: "Everything else lives on GitHub", zh: "其余项目都在 GitHub 上" },
+          href: "https://github.com/KraHsu?tab=repositories",
+        },
+      ],
     },
 
     {
@@ -199,18 +210,19 @@ export default {
       },
       caption: {
         en: "I write about frontend systems, research tooling, and the places where engineering becomes a design problem.",
-        zh: "我写前端系统、研究工具，以及工程变成设计问题的那些地方。",
+        zh: "我在博客里记录前端系统和科研工具的开发，也聊聊工程实践中遇到的设计问题。",
       },
-      link: { text: { en: "Read the archived blog", zh: "阅读已归档的博客" }, href: "https://hsublog.pages.dev" },
+      link: { text: { en: "Read the blog", zh: "去博客看看" }, href: "https://blog.krahsu.top" },
     },
   ],
 
   contact: {
     kicker: { en: "KEEP IN TOUCH", zh: "保持联系" },
-    status: { en: "OPEN TABS", zh: "标签页常开" },
-    title: { en: "Say hello\n*when you feel like it.*", zh: "想打招呼时，\n*随时都好。*" },
+    status: { en: "OPEN TABS", zh: "总有标签页开着" },
+    title: { en: "Say hello\n*when you feel like it.*", zh: "想聊聊？\n*随时来打个招呼。*" },
     email: "charles040318@gmail.com",
     links: [
+      { text: "blog.krahsu.top", href: "https://blog.krahsu.top" },
       { text: "GitHub", href: "https://github.com/KraHsu" },
       { text: { en: "Bilibili", zh: "哔哩哔哩" }, href: "https://space.bilibili.com/86698256" },
     ],

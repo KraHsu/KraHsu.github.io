@@ -28,7 +28,7 @@ const stars = useRepoStars(props.section.items.map((project) => project.repo).fi
           <p>{{ l(project.description) }}</p>
         </a>
       </div>
-      <SectionFootnote v-if="section.footnote" :footnote="section.footnote" />
+      <SectionFootnote v-for="footnote in section.footnotes" :key="footnote.href" :footnote="footnote" />
     </div>
   </section>
 </template>

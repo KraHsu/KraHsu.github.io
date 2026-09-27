@@ -104,14 +104,15 @@ export interface PapersSection extends SectionBase {
   /** Label next to each card's running number, e.g. "PAPER + CODE" → "01 / PAPER + CODE". */
   itemLabel: Text;
   items: Paper[];
-  footnote?: Footnote;
+  /** Link rows under the cards, e.g. archived work or "more on GitHub". */
+  footnotes?: Footnote[];
 }
 
 export interface ProjectsSection extends SectionBase {
   type: "projects";
   itemLabel: Text;
   items: Project[];
-  footnote?: Footnote;
+  footnotes?: Footnote[];
 }
 
 export interface QuoteSection extends SectionBase {

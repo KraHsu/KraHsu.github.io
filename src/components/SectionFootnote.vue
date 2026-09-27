@@ -14,6 +14,7 @@ const { l } = useContent();
 
 <style scoped>
 .footnote { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; margin-top: 28px; padding: 19px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--muted); font: 400 14px var(--mono); transition: color .2s ease, border-color .2s ease; }
+.footnote + .footnote { margin-top: 0; border-top: 0; }
 .footnote .mono-label { flex: none; color: var(--faint); font-size: 11px; }
 .footnote-arrow { display: inline-block; color: var(--accent); transition: transform .25s ease; }
 .footnote:hover { color: var(--accent); border-bottom-color: var(--accent); }
