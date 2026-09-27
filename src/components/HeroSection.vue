@@ -8,23 +8,23 @@ const { t } = useI18n();
 const { site, l } = useContent();
 const hero = site.hero;
 
-const heroEl = ref(null);
 const art = ref(null);
 let frame = 0;
 let offset = { x: 0, y: 0 };
 
-// Normalised pointer offset from the artwork centre, in [-1, 1]; layers scale it by depth in CSS.
+// Map the whole viewport to [-1, 1] so movement stays responsive outside the hero.
+// Viewport coordinates also keep the effect stable while the page scrolls.
 function paint() {
   frame = 0;
   art.value?.style.setProperty("--px", offset.x.toFixed(3));
   art.value?.style.setProperty("--py", offset.y.toFixed(3));
 }
 function track(event) {
-  const box = art.value.getBoundingClientRect();
+  if (event.pointerType === "touch") return;
   const clamp = (value) => Math.max(-1, Math.min(1, value));
   offset = {
-    x: clamp((event.clientX - (box.left + box.width / 2)) / (box.width / 2)),
-    y: clamp((event.clientY - (box.top + box.height / 2)) / (box.height / 2)),
+    x: clamp((event.clientX / Math.max(window.innerWidth, 1)) * 2 - 1),
+    y: clamp((event.clientY / Math.max(window.innerHeight, 1)) * 2 - 1),
   };
   frame ||= requestAnimationFrame(paint);
 }
@@ -36,18 +36,20 @@ function reset() {
 onMounted(() => {
   const canTilt = window.matchMedia("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)").matches;
   if (!canTilt) return;
-  heroEl.value.addEventListener("pointermove", track, { passive: true });
-  heroEl.value.addEventListener("pointerleave", reset);
+  window.addEventListener("pointermove", track, { passive: true });
+  document.documentElement.addEventListener("pointerleave", reset);
+  window.addEventListener("blur", reset);
 });
 onBeforeUnmount(() => {
-  heroEl.value?.removeEventListener("pointermove", track);
-  heroEl.value?.removeEventListener("pointerleave", reset);
+  window.removeEventListener("pointermove", track);
+  document.documentElement.removeEventListener("pointerleave", reset);
+  window.removeEventListener("blur", reset);
   cancelAnimationFrame(frame);
 });
 </script>
 
 <template>
-  <section ref="heroEl" class="hero" id="top">
+  <section class="hero" id="top">
     <div v-reveal class="hero-copy reveal">
       <p class="eyebrow mono-label"><span class="eyebrow-line"></span> {{ l(hero.eyebrow) }}</p>
       <RichText tag="h1" :text="l(hero.title)" />
