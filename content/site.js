@@ -186,8 +186,8 @@ export default {
         {
           label: { en: "ARCHIVED / SIDE PROJECT", zh: "已归档 / 业余项目" },
           text: {
-            en: "HsuBlog — an earlier Astro theme, kept here as a small footnote",
-            zh: "HsuBlog —— 早期做的一个 Astro 主题，留在这里作个记录",
+            en: "an earlier Astro theme, archived now",
+            zh: "早期的 Astro 主题，现已归档",
           },
           href: "https://github.com/KraHsu/HsuBlog",
         },
